@@ -1,0 +1,40 @@
+<div class= "containerr-xxl">
+  <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <h1>Task Manager</h2>
+    </div>
+  </nav>
+
+  <p> </p>
+
+  <h2 class="fw-normal">Helping you keep track of the many daily tasks you need to acheive !</h2>
+
+  <p> </p>
+
+  <div class="card">
+    <div class="card-body container-fluid rounded-2 d-flex justify-content-center">
+      Here Is Your All Your Recorded Tasks
+    </div>
+
+    <div>
+      <ul class="list-group list-group-flush">
+        <% @tasks.each do |task| %>
+            <li class="list-group-item">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                    <label class="form-check-label" for="flexCheckIndeterminate">
+                      <%= task.name %>
+                    </label>
+                </div>
+            </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+  <p> </p>
+
+  <div class="d-grid gap-2 col-6 mx-auto">
+   <%= link_to "Add New Task", new_task_path, class: "btn btn-primary" %>
+  </div>
+</div>

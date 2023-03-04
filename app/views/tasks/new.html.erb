@@ -1,0 +1,23 @@
+<div class= "containerr-xxl">
+  <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <h1>Task Manager</h2>
+    </div>
+  </nav>
+
+  <p> </p>
+
+  <h2 class="fw-normal">Helping you keep track of the many daily tasks you need to acheive !</h2>
+
+  <p> </p>
+
+  <div class="card">
+    <div class="card-body container-fluid rounded-2 d-flex justify-content-center">
+      <%= form_with model: @task do |f| %>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+
+</div>
